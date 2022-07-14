@@ -1,5 +1,4 @@
 import tkinter as tk
-
 with open("loaded_filaments.txt", "r") as file:
     content = file.read()
     filnum1 = int(content.split('\n', 3)[0])

@@ -1,9 +1,9 @@
 import tkinter as tk
-import subprocess
+from os import system
 
-def ok():
-    subprocess.run("python3 status.py")
-    print("ok")
+def coco():
+	system("python3 status.py")
+
 window = tk.Tk()
 window.geometry("480x320")
 window.title("FILAMENT BOX")
@@ -21,7 +21,7 @@ sysbtnImg=tk.PhotoImage(file="main_screen_assets/systembtn/sysbtn1.png")
 controlbtnImg=tk.PhotoImage(file="main_screen_assets/controlbtn/controlbtn1.png")
 aboutbtnImg=tk.PhotoImage(file="main_screen_assets/aboutbtn/aboutbtn1.png")
 
-statusbtn = tk.Button(window, image=statusbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=ok())
+statusbtn = tk.Button(window, image=statusbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=coco)
 statusbtn.grid(column=0,row=0)
 
 confbtn = tk.Button(window, image=confbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor)
