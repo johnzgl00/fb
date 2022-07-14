@@ -3,19 +3,19 @@ import tkinter as tk
 window = tk.Tk()
 window.geometry("480x320")
 window.title("FILAMENT BOX")
-window.configure(bg="red")
+window.configure(bg="#222222")
+#window.attributes('-fullscreen', True)
 
 btnheight=10
 btnwidth=22
 backgroundColor="#222"
 
-statusbtnImg=tk.PhotoImage(file="statusbtn/statusbtn1.png")
-confbtnImg=tk.PhotoImage(file="confbtn/confbtn1.png")
-infobtnImg=tk.PhotoImage(file="infobtn/infobtn1.png")
-sysbtnImg=tk.PhotoImage(file="systembtn/sysbtn1.png")
-controlbtnImg=tk.PhotoImage(file="controlbtn/controlbtn1.png")
-aboutbtnImg=tk.PhotoImage(file="aboutbtn/aboutbtn1.png")
-buttonImg=tk.PhotoImage(file="button.png")
+statusbtnImg=tk.PhotoImage(file="main_screen_assets/statusbtn/statusbtn1.png")
+confbtnImg=tk.PhotoImage(file="main_screen_assets/confbtn/confbtn1.png")
+infobtnImg=tk.PhotoImage(file="main_screen_assets/infobtn/infobtn1.png")
+sysbtnImg=tk.PhotoImage(file="main_screen_assets/systembtn/sysbtn1.png")
+controlbtnImg=tk.PhotoImage(file="main_screen_assets/controlbtn/controlbtn1.png")
+aboutbtnImg=tk.PhotoImage(file="main_screen_assets/aboutbtn/aboutbtn1.png")
 
 statusbtn = tk.Button(window, image=statusbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor)
 statusbtn.grid(column=0,row=0)
