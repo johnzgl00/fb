@@ -1,4 +1,3 @@
-from cProfile import label
 import tkinter as tk
 
 with open("loaded_filaments.txt", "r") as file:
