@@ -1,4 +1,9 @@
 import tkinter as tk
+import keyboard
+
+def exitStatus(e):
+    window.destroy()
+
 with open("loaded_filaments.txt", "r") as file:
     content = file.read()
     filnum1 = int(content.split('\n', 3)[0])
@@ -28,5 +33,9 @@ slot2.grid(column=1,row=0)
 slot3 = label1=tk.Label(window, bd=0, highlightthickness=0, image=fil3)
 slot3.grid(column=2,row=0)
 
+window.bind('<Escape>', lambda e: exitStatus(e))
 
 window.mainloop()
+
+            
+
