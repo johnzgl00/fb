@@ -73,11 +73,11 @@ slot1num.place(x=60, y=35)
 
 upbtnimg=tk.PhotoImage(file="config_screen_assets/up.png")
 up1slot=tk.Button(window, bd=0, highlightthickness=0, activebackground="#2a2a2a", image=upbtnimg, command=ups1)
-up1slot.place(x=82, y=100)
+up1slot.place(x=80, y=100)
 
 downbtnimg=tk.PhotoImage(file="config_screen_assets/down.png")
 down1slot=tk.Button(window, bd=0, highlightthickness=0, activebackground="#2a2a2a", image=downbtnimg, command=downs1)
-down1slot.place(x=12, y=100)
+down1slot.place(x=10, y=100)
 
 spoolimg=tk.PhotoImage(file="config_screen_assets/filament.png")
 spool1=tk.Label(window, bd=0, highlightthickness=0, image=spoolimg)
@@ -92,10 +92,10 @@ slot2num=tk.Label(window, textvariable=num2, font=("Arial", 40), fg="red", bg="#
 slot2num.place(x=222, y=35)
 
 up2slot=tk.Button(window, bd=0, highlightthickness=0, activebackground="#2a2a2a", image=upbtnimg, command=ups2)
-up2slot.place(x=242, y=100)
+up2slot.place(x=241, y=100)
 
 down2slot=tk.Button(window, bd=0, highlightthickness=0, activebackground="#2a2a2a", image=downbtnimg, command=downs2)
-down2slot.place(x=172, y=100)
+down2slot.place(x=171, y=100)
 
 spool2=tk.Label(window, bd=0, highlightthickness=0, image=spoolimg)
 spool2.place(x=198,y=200)

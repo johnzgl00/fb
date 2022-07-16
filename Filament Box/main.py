@@ -4,7 +4,7 @@ from os import system
 def status():
 	system("python3 status.py")
 def conf():
-	system("python3 conf.py")
+	system("python3 config.py")
 
 window = tk.Tk()
 window.geometry("480x320")
