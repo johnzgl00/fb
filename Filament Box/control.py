@@ -6,7 +6,7 @@ def exitStatus(e):
 def shutdown():
     system("sudo shutdown now")
 def restart():
-    system("sudo restart now")
+    system("sudo shutdown -r now")
 def lights():
     print("toggle lights")
 def fan():
