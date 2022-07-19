@@ -7,6 +7,10 @@ def conf():
 	system("python3 config.py")
 def info():
 	system("python3 info.py")
+def sys():
+	system("python3 system.py")
+def control():
+	system("python3 control.py")
 
 window = tk.Tk()
 window.geometry("480x320")
@@ -34,10 +38,10 @@ confbtn.grid(column=1,row=0)
 infobtn = tk.Button(window, image=infobtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=info)
 infobtn.grid(column=2,row=0)
 
-systembtn = tk.Button(window, image=sysbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor)
+systembtn = tk.Button(window, image=sysbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=sys)
 systembtn.grid(column=0,row=1)
 
-controlbtn = tk.Button(window, image=controlbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor)
+controlbtn = tk.Button(window, image=controlbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=control)
 controlbtn.grid(column=1,row=1)
 
 aboutbtn = tk.Button(window, image=aboutbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor)
