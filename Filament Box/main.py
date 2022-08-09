@@ -11,6 +11,8 @@ def sys():
 	system("python3 system.py")
 def control():
 	system("python3 control.py")
+def about():
+	system("python3 about.py")
 
 window = tk.Tk()
 window.geometry("480x320")
@@ -44,7 +46,7 @@ systembtn.grid(column=0,row=1)
 controlbtn = tk.Button(window, image=controlbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=control)
 controlbtn.grid(column=1,row=1)
 
-aboutbtn = tk.Button(window, image=aboutbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor)
+aboutbtn = tk.Button(window, image=aboutbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=about)
 aboutbtn.grid(column=2,row=1)
 
 
