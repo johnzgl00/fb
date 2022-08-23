@@ -1,53 +1,49 @@
 import tkinter as tk
-from os import system
+from turtle import title
 
-def status():
-	system("python3 status.py")
-def conf():
-	system("python3 config.py")
-def info():
-	system("python3 info.py")
-def sys():
-	system("python3 system.py")
-def control():
-	system("python3 control.py")
-def about():
-	system("python3 about.py")
+with open("loaded_filaments.txt", "r") as file:
+    content = file.read()
+    title1 = content.split('\n', 3)[0]
+    title2 = content.split('\n', 3)[1]
+    title3 = content.split('\n', 3)[2]
 
-window = tk.Tk()
+with open("env.txt", "r") as file:
+    content = file.read()
+    temp = content.split('\n', 3)[0]
+    hum = content.split('\n', 3)[1]
+
+
+window= tk.Tk()
 window.geometry("480x320")
-window.title("FILAMENT BOX")
-window.configure(bg="#222222")
-window.attributes('-fullscreen', True)
+window.configure(bg="#fff")
+#window.attributes('-fullscreen', True)
 
-btnheight=10
-btnwidth=22
-backgroundColor="#222"
+title1str=tk.StringVar()
+title1str.set(str(title1))
+title2str=tk.StringVar()
+title2str.set(str(title2))
+title3str=tk.StringVar()
+title3str.set(str(title3))
 
-statusbtnImg=tk.PhotoImage(file="main_screen_assets/statusbtn/statusbtn1.png")
-confbtnImg=tk.PhotoImage(file="main_screen_assets/confbtn/confbtn1.png")
-infobtnImg=tk.PhotoImage(file="main_screen_assets/infobtn/infobtn1.png")
-sysbtnImg=tk.PhotoImage(file="main_screen_assets/systembtn/sysbtn1.png")
-controlbtnImg=tk.PhotoImage(file="main_screen_assets/controlbtn/controlbtn1.png")
-aboutbtnImg=tk.PhotoImage(file="main_screen_assets/aboutbtn/aboutbtn1.png")
+tempstr=tk.StringVar()
+tempstr.set(str(temp))
+humstr=tk.StringVar()
+humstr.set(str(hum))
 
-statusbtn = tk.Button(window, image=statusbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=status)
-statusbtn.grid(column=0,row=0)
+background=tk.PhotoImage(file="assets/background.png")
+bg=tk.Label(window, bd=0, highlightthickness=0, image=background)
+bg.pack(padx=0, pady=0)
 
-confbtn = tk.Button(window, image=confbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=conf)
-confbtn.grid(column=1,row=0)
+spool1=tk.Label(window, textvariable=title1str, font=("Bansrift", 35), fg="black", bg="#fff")
+spool1.place(x=90, y=11)
+spool2=tk.Label(window, textvariable=title2str, font=("Bansrift", 35), fg="black", bg="#fff")
+spool2.place(x=90, y=91)
+spool3=tk.Label(window, textvariable=title3str, font=("Bansrift", 35), fg="black", bg="#fff")
+spool3.place(x=90, y=171)
 
-infobtn = tk.Button(window, image=infobtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=info)
-infobtn.grid(column=2,row=0)
-
-systembtn = tk.Button(window, image=sysbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=sys)
-systembtn.grid(column=0,row=1)
-
-controlbtn = tk.Button(window, image=controlbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=control)
-controlbtn.grid(column=1,row=1)
-
-aboutbtn = tk.Button(window, image=aboutbtnImg, bd=0, highlightthickness=0, bg=backgroundColor, activebackground=backgroundColor, command=about)
-aboutbtn.grid(column=2,row=1)
-
+temps=tk.Label(window, textvariable=tempstr, font=("Bansrift", 35), fg="black", bg="#fff")
+temps.place(x=90, y=251)
+hums=tk.Label(window, textvariable=humstr, font=("Bansrift", 35), fg="black", bg="#fff")
+hums.place(x=285, y=251)
 
 window.mainloop()
