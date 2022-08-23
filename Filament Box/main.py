@@ -16,7 +16,7 @@ with open("env.txt", "r") as file:
 window= tk.Tk()
 window.geometry("480x320")
 window.configure(bg="#fff")
-#window.attributes('-fullscreen', True)
+window.attributes('-fullscreen', True)
 
 title1str=tk.StringVar()
 title1str.set(str(title1))
