@@ -9,8 +9,8 @@ while True:
     humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
     if humidity is not None and temperature is not None:
         with open('env.txt', 'w') as f:
-            f.write(str(temperature)+"C")
+            f.write(str(int(temperature))+"C")
             f.write("\n")
-            f.write(str(humidity)+"%")
+            f.write(str(int(humidity))+"%")
     else:
         print("error")
