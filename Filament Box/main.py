@@ -30,7 +30,7 @@ humstr=tk.StringVar()
 humstr.set(str(hum))
 
 background=tk.PhotoImage(file="assets/background.png")
-bg=tk.Label(window, bd=0, borderwidth=0, highlightthickness=0, image=background)
+bg=tk.Label(window, image=background)
 bg.pack(padx=0, pady=0)
 
 spool1=tk.Label(window, textvariable=title1str, font=("Bansrift", 35), fg="black", bg="#fff")
@@ -46,7 +46,7 @@ hums=tk.Label(window, textvariable=humstr, font=("Bansrift", 35), fg="black", bg
 hums.place(x=285, y=251)
 
 refreshimg=tk.PhotoImage(file="assets/refreshbtn.png")
-refresh=tk.Button(window, image=refreshimg, highlightthickness = 0, bd = 0,activebackground="#fff")
+refresh=tk.Button(window, image=refreshimg, highlightthickness = 0, bd = 0, borderwidth=0, activebackground="#fff")
 refresh.place(x=410, y=251)
 
 window.mainloop()
