@@ -63,4 +63,6 @@ refreshimg=tk.PhotoImage(file="assets/refreshbtn.png")
 refresh=tk.Button(window, image=refreshimg, highlightbackground="#fff", background="#fff", highlightthickness = 0, bd = 0, borderwidth=0, activebackground="#fff", command=refreshVar)
 refresh.place(x=410, y=249)
 
+window.bind("<Enter>", refreshVar())
+
 window.mainloop()
